@@ -13,7 +13,7 @@ public class Main {
         // Задача 2
         System.out.println("Задача 2");
 
-        checkVersionSystemPhone(1, 2015);
+        checkVersionSystemPhone(1, 2024);
 
 
         // Задача 3
@@ -51,16 +51,17 @@ public class Main {
         int days = 1;
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: " + days);
+            return days;
         } else if (deliveryDistance > 20 && deliveryDistance < 60) {
             System.out.println("Потребуется дней: " + (days + 1));
+            return days;
         } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
             System.out.println("Потребуется дней: " + (days + 2));
+            return days;
         } else {
             System.out.println("Доставки нет");
+            return days;
         }
-        return days;
     }
-
-
 }
 
