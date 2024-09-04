@@ -19,7 +19,8 @@ public class Main {
         // Задача 3
         System.out.println("Задача 3");
 
-        int deliveryDistance = calculateDays(95);
+        int deliveryDays = calculateDays(95);
+        System.out.println("Потребуется дней: " + deliveryDays);
 
     }
 
@@ -48,20 +49,19 @@ public class Main {
     }
 
     public static int calculateDays(int deliveryDistance) {
-        int days = 1;
+        int deliveryDays = 0;
         if (deliveryDistance <= 20) {
-            System.out.println("Потребуется дней: " + days);
-            return days;
+            deliveryDays = deliveryDays + 1;
         } else if (deliveryDistance > 20 && deliveryDistance < 60) {
-            System.out.println("Потребуется дней: " + (days + 1));
-            return days;
+            deliveryDays = deliveryDays + 2;
         } else if (deliveryDistance >= 60 && deliveryDistance < 100) {
-            System.out.println("Потребуется дней: " + (days + 2));
-            return days;
+            deliveryDays = deliveryDays + 3;
         } else {
             System.out.println("Доставки нет");
-            return days;
         }
+        return deliveryDays;
     }
 }
+
+
 
